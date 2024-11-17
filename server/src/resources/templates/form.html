@@ -1,0 +1,11 @@
+<form th:with="id=${#strings.randomAlphanumeric(8)}" th:action="'/form/submit#' + ${id}" th:id="${id}" target=htmz >
+	<div class="nice-form-group">
+		<label>Bluesky</label>
+		<input type="text" placeholder="@hetzge.bsky.social" />
+	</div>
+	<div class="nice-form-group">
+		<label>Mastodon</label>
+		<input type="text" placeholder="@hetzge@mastodon.social" />
+	</div>
+	<input type="submit" value="Submit" />
+</form>

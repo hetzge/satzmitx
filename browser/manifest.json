@@ -1,0 +1,43 @@
+{
+	"manifest_version": 2,
+	"name": "SatzMitX",
+	"version": "1.0",
+	"description": "Collect informations that help to exit X",
+	"icons": {
+		"48": "icons/icon48.png"
+	},
+	"web_accessible_resources": [
+		"icons/bluesky.png"
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": false,
+		"type": "module"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*/*"
+			],
+			"js": [
+				"content.js"
+			]
+		},
+		{
+			"matches": [
+				"*://twitter.com/*",
+				"*://x.com/*"
+			],
+			"js": [
+				"twitter.js"
+			]
+		}
+	],
+	"sidebar_action": {
+		"default_title": "SatzMitX",
+		"default_panel": "ui.html",
+		"default_icon": "icons/icon48.png"
+	}
+}

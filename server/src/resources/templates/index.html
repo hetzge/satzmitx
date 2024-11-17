@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>SatzMitX</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/webjars/normalize.css/8.0.1/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/webjars/nice-forms.css/0.1.7/dist/nice-forms.css" />
+</head>
+
+<body>
+	<p th:text="${name}"></p>
+	<div th:insert="form.html"></div>
+	<iframe hidden name=htmz onload="setTimeout(()=>document.querySelector(contentWindow.location.hash||null)?.replaceWith(...contentDocument.body.childNodes))"></iframe>
+</body>
+
+</html>
